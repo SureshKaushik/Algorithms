@@ -47,7 +47,7 @@ namespace LearnMSDN
             //Pairs();                      //Timeout error
             //FindMaximumSubArrayAddition();
             //FunnyString();
-            SubsetsWithAUniqueSum();
+            //SubsetsWithAUniqueSum();
             //MissingNumbers();           
             //TwoStrings();
 
@@ -95,8 +95,37 @@ namespace LearnMSDN
             //DrawingBook();
 
             //MakePatter();
+            ElectronicsShop();
 
             Console.ReadLine();
+        }
+
+        private static void ElectronicsShop()
+        {
+            int[] keyboards = { 3, 1 };
+            int[] drives = { 5, 2, 8 };
+            int s = 10;
+            int value = 0;
+
+            for (int i = 0; i < keyboards.Length; i++)
+            {
+                for (int j = 0; j < drives.Length; j++)
+                {
+                    int temp = keyboards[i] + drives[j];
+                    if (temp <= s && temp > value)
+                    {  
+                        value = temp;
+                    }
+                }
+            }
+            if (value != 0)
+            {
+                Console.WriteLine(value);
+            }
+            else
+            {
+                Console.WriteLine("-1");
+            }
         }
 
         private static void DrawingBook()
