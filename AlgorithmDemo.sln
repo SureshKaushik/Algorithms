@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmDemo", "AlgorithmDemo\AlgorithmDemo.csproj", "{AE5A4247-DFA5-482B-8D42-442246B2A056}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplementDataAccess", "ImplementDataAccess\ImplementDataAccess.csproj", "{C3AC3CB6-96A6-45EC-87D3-D02368204629}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormDemo", "..\WinFormDemo\WinFormDemo\WinFormDemo.csproj", "{BE0D3023-54B5-4CA4-9AF5-88CCEF739622}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLRS_AlgoDemo", "CLRS_AlgoDemo\CLRS_AlgoDemo.csproj", "{992EDBB7-7DAE-4B74-96E1-4AF4E0479B4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaysianNetwork.Learning", "BaysianNetwork.Learning\BaysianNetwork.Learning.csproj", "{39DA78DD-A007-474C-A130-7E9E68BF81AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnMSDN", "LearnMSDN\LearnMSDN.csproj", "{037B7D1A-34CC-41B3-A6F3-305FE34CCD78}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ResourceApp", "ResourceApp\ResourceApp.vbproj", "{15E8487B-6C91-46C9-B625-D4AB39D34912}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE5A4247-DFA5-482B-8D42-442246B2A056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE5A4247-DFA5-482B-8D42-442246B2A056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE5A4247-DFA5-482B-8D42-442246B2A056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE5A4247-DFA5-482B-8D42-442246B2A056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3AC3CB6-96A6-45EC-87D3-D02368204629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3AC3CB6-96A6-45EC-87D3-D02368204629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3AC3CB6-96A6-45EC-87D3-D02368204629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3AC3CB6-96A6-45EC-87D3-D02368204629}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE0D3023-54B5-4CA4-9AF5-88CCEF739622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE0D3023-54B5-4CA4-9AF5-88CCEF739622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE0D3023-54B5-4CA4-9AF5-88CCEF739622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE0D3023-54B5-4CA4-9AF5-88CCEF739622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{992EDBB7-7DAE-4B74-96E1-4AF4E0479B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{992EDBB7-7DAE-4B74-96E1-4AF4E0479B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{992EDBB7-7DAE-4B74-96E1-4AF4E0479B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{992EDBB7-7DAE-4B74-96E1-4AF4E0479B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39DA78DD-A007-474C-A130-7E9E68BF81AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39DA78DD-A007-474C-A130-7E9E68BF81AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39DA78DD-A007-474C-A130-7E9E68BF81AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39DA78DD-A007-474C-A130-7E9E68BF81AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{037B7D1A-34CC-41B3-A6F3-305FE34CCD78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{037B7D1A-34CC-41B3-A6F3-305FE34CCD78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{037B7D1A-34CC-41B3-A6F3-305FE34CCD78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{037B7D1A-34CC-41B3-A6F3-305FE34CCD78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15E8487B-6C91-46C9-B625-D4AB39D34912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15E8487B-6C91-46C9-B625-D4AB39D34912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15E8487B-6C91-46C9-B625-D4AB39D34912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15E8487B-6C91-46C9-B625-D4AB39D34912}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
