@@ -95,9 +95,30 @@ namespace LearnMSDN
             //DrawingBook();
 
             //MakePatter();
-            ElectronicsShop();
+            //ElectronicsShop();
+
+            CatsAndMouse();
 
             Console.ReadLine();
+        }
+
+        private static void CatsAndMouse()
+        {
+            int x = 1, y = 2, z = 3;
+
+            if (Math.Abs(x-z) > Math.Abs(y-z))
+            {
+                Console.WriteLine("Cat B");   
+            }
+            else if(Math.Abs(x-z) < Math.Abs(y-z))
+            {
+                Console.WriteLine("Cat A");
+            }
+            else
+            {
+                Console.WriteLine("Mouse C");
+            }
+            
         }
 
         private static void ElectronicsShop()
