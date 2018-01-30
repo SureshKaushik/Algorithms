@@ -71,7 +71,7 @@ namespace LearnMSDN
             //BigSorting();                   //Solve it;
             //FindMedianValue();
 
-            //HeapSort();
+            HeapSort();
 
             //MergeSort();
 
@@ -97,9 +97,63 @@ namespace LearnMSDN
             //MakePatter();
             //ElectronicsShop();
 
-            CatsAndMouse();
+            //CatsAndMouse();
+
+            //FormingAMagizSquare();
+            //CountingSort1();
 
             Console.ReadLine();
+        }
+
+        private static void CountingSort1()
+        {
+            string str = "63 25 73 1 98 73 56 84 86 57 16 83 8 25 81 56 9 53 98 67 99 12 83 89 80 91 39 86 76 85 74 39 25 90 59 10 94 32 44 3 89 30 27 79 46 96 27 32 18 21 92 69 81 40 40 34 68 78 24 87 42 69 23 41 78 22 6 90 99 89 50 30 20 1 43 3 70 95 33 46 44 9 69 48 33 60 65 16 82 67 61 32 21 79 75 75 13 87 70 33";
+            string[] strarr = str.Split(' ');
+            int[] arr = Array.ConvertAll(strarr, Int32.Parse);
+
+            Dictionary<int, int> count = new Dictionary<int, int>();
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (count.ContainsKey(arr[i]))
+                {
+                    count[arr[i]]++;
+                }
+                else
+                {
+                    count.Add(arr[i], 0);
+                }
+            }
+
+            foreach (var item in count)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        private static void FormingAMagizSquare()
+        {
+            int[,] s = { { 4, 9, 2 }, { 3, 5, 7 }, { 8, 1, 5 } };
+
+            for (int i = 0; i < 3; i++)
+            {
+                int value = 0;
+                for (int j = 0; j < s.Length; j++)
+                {
+                    value += s[i,j];
+                }
+                Console.WriteLine(value);
+            }
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                int value = 0;
+                for (int j = 0; j < s.Length; j++)
+                {
+                    value += s[j, i];
+                }
+                Console.WriteLine(value);
+            }
         }
 
         private static void CatsAndMouse()
@@ -752,7 +806,6 @@ namespace LearnMSDN
             for (int i = 0; i < arr.Length; i++)
             {
                 int val = MaxHeapify(arr, i);
-
             }
         }
 
