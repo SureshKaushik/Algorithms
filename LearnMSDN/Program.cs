@@ -71,7 +71,7 @@ namespace LearnMSDN
             //BigSorting();                   //Solve it;
             //FindMedianValue();
 
-            HeapSort();
+            //HeapSort();
 
             //MergeSort();
 
@@ -102,7 +102,45 @@ namespace LearnMSDN
             //FormingAMagizSquare();
             //CountingSort1();
 
+            ReductionCost();
+
             Console.ReadLine();
+        }
+
+        private static void ReductionCost()
+        {
+            int[] num = { 1, 2, 3, 4};
+            int count = 0;
+
+            int i=0;
+            while (i < num.Length)
+            {
+                int j = i+1;
+                if (num.Length ==1)
+                {
+                    break;
+                }
+
+                if (i!=j && j < num.Length)
+                {
+                    int val = num[i] + num[j];
+                    count += val;
+                    num[i] = 0;
+                    num[j] = 0;
+
+                    while (i < num.Length - 2)
+                    {
+                        num[i] = num[i + 2];
+                        i++;
+                    }
+                    Array.Resize(ref num, num.Length - 1);
+
+                    num[num.Length - 1] = val;
+                    Array.Sort(num);
+                }
+                i = 0;
+            }
+            Console.WriteLine(count);
         }
 
         private static void CountingSort1()
