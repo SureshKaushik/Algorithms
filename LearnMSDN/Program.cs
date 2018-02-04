@@ -102,9 +102,50 @@ namespace LearnMSDN
             //FormingAMagizSquare();
             //CountingSort1();
 
-            ReductionCost();
+            //ReductionCost();
+
+            //FindUniqueString();
+
+            HackerlandRadioTransmitters();
 
             Console.ReadLine();
+        }
+
+        private static void HackerlandRadioTransmitters()
+        {
+            int[] x = {7,2,4, 6,5,9,12,11 };
+            int k = 2;
+            Array.Sort(x);
+            int count = 0;
+
+            for (int i = 0; i < x.Length; i++)
+            {
+                while (Math.Abs(x[i]-x[++i]) <= k)
+                {
+                    i++;
+                }
+                i = j;
+                count++;
+            }
+        }
+
+        private static void FindUniqueString()
+        {
+            string s = "beabeefeab";
+            string s1 = "";
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (!s1.Contains(s[i]))
+                {
+                    s1 += s[i];
+                }
+            }
+            Console.WriteLine(s1);
+            for (int j = 0; j < s1.Length; j++)
+            {
+                s = s.Remove(j);
+            }
         }
 
         private static void ReductionCost()
