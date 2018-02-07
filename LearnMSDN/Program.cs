@@ -106,9 +106,41 @@ namespace LearnMSDN
 
             //FindUniqueString();
 
-            HackerlandRadioTransmitters();
-
+            //HackerlandRadioTransmitters();
+            RevisedRussianRoulette();
             Console.ReadLine();
+        }
+
+        private static void RevisedRussianRoulette()
+        {
+            int[] doors = {0,1 ,0 ,1,0,1,0,1,1,1};
+
+            int i = 0;
+            int maxLocked = 0;
+            int minLocked = 0;
+
+            while (i < doors.Length)
+            {
+                int j = i;
+                int k = j+1;
+                if (j < doors.Length && k <doors.Length)
+                {
+                    if (doors[j]==1 && doors[k] == 1)
+                    {
+                        minLocked++;
+                        j++;
+                    }
+                    else if(doors[j]==1)
+                    {
+                        maxLocked++;
+                        j++;
+                    }
+                    else
+                    { j++; }
+                }
+                i = j;
+            }
+            Console.WriteLine(minLocked + "--" + maxLocked);
         }
 
         private static void HackerlandRadioTransmitters()
@@ -117,6 +149,7 @@ namespace LearnMSDN
             int k = 2;
             Array.Sort(x);
             int count = 0;
+            int j = 0;
 
             for (int i = 0; i < x.Length; i++)
             {
@@ -214,14 +247,23 @@ namespace LearnMSDN
         {
             int[,] s = { { 4, 9, 2 }, { 3, 5, 7 }, { 8, 1, 5 } };
 
-            for (int i = 0; i < 3; i++)
+            int digVal = 0;
+            int length = s.GetLength(0);
+
+            for (int i = 0; i < length; i++)
             {
                 int value = 0;
-                for (int j = 0; j < s.Length; j++)
+                int colVal = 0;               
+
+                for (int j = 0; j < length; j++)
                 {
                     value += s[i,j];
+                    colVal += s[j, i];
+                    
                 }
-                Console.WriteLine(value);
+                digVal += s[i, i];
+                if (value == colVal)
+                    continue;                    
             }
 
             for (int i = 0; i < s.Length; i++)
@@ -237,7 +279,8 @@ namespace LearnMSDN
 
         private static void CatsAndMouse()
         {
-            int x = 1, y = 2, z = 3;
+            int x = 1, y = 2, z
+                = 3;
 
             if (Math.Abs(x-z) > Math.Abs(y-z))
             {
