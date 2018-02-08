@@ -143,7 +143,7 @@ namespace ImplementDataAccess
 
             FileInfo fileInfo = new FileInfo(path);
 
-                if (fileInfo.Exists)
+            if (fileInfo.Exists)
             {
                 fileInfo.Delete();
             }

@@ -80,7 +80,7 @@ namespace LearnMSDN
 
             //MakingAnagrams();
 
-            //StringConstruction();
+            StringConstruction();
             //StringFunctionCalculation(); -Incomlete
 
             //AbsoluteElementSums();
@@ -107,7 +107,7 @@ namespace LearnMSDN
             //FindUniqueString();
 
             //HackerlandRadioTransmitters();
-            RevisedRussianRoulette();
+            //RevisedRussianRoulette();
             Console.ReadLine();
         }
 
