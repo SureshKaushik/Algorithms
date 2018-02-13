@@ -6,9 +6,21 @@ using System.Threading.Tasks;
 
 namespace CLRS_AlgoDemo
 {
+   
     interface ICloningService
     {
         T Clone<T>(T source);
+    }
+
+    public class ValueWrapper<T> where T : struct
+    {
+        public T Value { get; set; }
+        public ValueWrapper(T value) { this.Value = value; }
+
+        public object ShallowCopy()
+        {
+            return this.MemberwiseClone();
+        }
     }
 
     public class CloningService: ICloningService
@@ -74,7 +86,13 @@ namespace CLRS_AlgoDemo
             //GetInput();
             //LeftRotate();
 
+            int x = 10;
+            ValueWrapper<int> intVal = new ValueWrapper<int>(x);
+
             Person p1 = new Person(31, "Suresh", "Kaushik");
+            Person shallow1 = (Person)p1.ShallowCopy();
+            Person p22 = p1.DeepCopy();
+
             //Person p2 = p1;         //passing reference
 
             if (Convert.ToInt32(Console.ReadLine()) ==0)
