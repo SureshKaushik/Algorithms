@@ -76,6 +76,10 @@ namespace AlgorithmDemo
 
             ConvertibleCar c2 = new ConvertibleCar();
 
+            DelegateCall();
+
+            EventCall();
+
            // Console.ReadLine();
 
             //ChildCls c2 = new BaseCls();
