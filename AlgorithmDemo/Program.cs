@@ -75,9 +75,6 @@ namespace AlgorithmDemo
             c1.ShowDetails();
 
             ConvertibleCar c2 = new ConvertibleCar();
-            
-
-
 
            // Console.ReadLine();
 
