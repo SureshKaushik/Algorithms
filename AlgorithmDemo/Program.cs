@@ -70,15 +70,18 @@ namespace AlgorithmDemo
         static void Main(string[] args)
         {
             //CheckInheritanceFeature();
-            Car c1 = new Car();
-            c1.DescribeCar();
-            c1.ShowDetails();
+            //Car c1 = new Car();
+            //c1.DescribeCar();
+            //c1.ShowDetails();
 
-            ConvertibleCar c2 = new ConvertibleCar();
+            //ConvertibleCar c2 = new ConvertibleCar();
 
-            DelegateCall();
+            //DelegateCall();
 
-            EventCall();
+            //EventCall();
+
+            //DISample.CallConstructorInjection();
+            DISample.CallPropertyInjection();
 
            // Console.ReadLine();
 
@@ -531,7 +534,7 @@ namespace AlgorithmDemo
 
             //DelegateCall();
 
-            //Console.ReadLine();
+            Console.ReadLine();
         }
 
         private static void CheckInheritanceFeature()
