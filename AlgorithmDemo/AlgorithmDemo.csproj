@@ -52,6 +52,7 @@
     <Compile Include="Clock.cs" />
     <Compile Include="DelegateCalculator.cs" />
     <Compile Include="DelegateTest.cs" />
+    <Compile Include="DesignPatternDemo.cs" />
     <Compile Include="DISample.cs" />
     <Compile Include="DynamicProgramming.cs" />
     <Compile Include="Employee.cs" />
