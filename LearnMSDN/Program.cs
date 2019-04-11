@@ -110,8 +110,56 @@ namespace LearnMSDN
             //RevisedRussianRoulette();
 
             //LongestChain();
-            LeftRotate();
+            //LeftRotate();
+
+            //SelectionSortDemo();
+
+            InsertionSortDemo();
+
             Console.ReadLine();
+        }
+
+        private static void InsertionSortDemo()
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// This class demo's the selection sort working and its algorithms
+        /// </summary>
+        private static void SelectionSortDemo()
+        {
+            // Step 1: Select min to location 0
+            // Step 2: Search the minimum element in the list
+            // Step 3: Swap with value at location MIN
+            // Step 4: Increment MIN to point to next element 
+            // Step 5: Repeat until list is sorted
+
+            int[] array1 = new int[] { 2, 5, 1, 3, 4 };
+
+            for (int i =0; i < array1.Length-1 ; i++)
+            {
+                int min = i;        //Select minimum
+                int j = i+1;
+
+                // iterating from j to end of an array
+                while (j < array1.Length)        
+                {
+                    if (array1[j] < array1[min]) // Search min value in list
+                    {
+                        min = j;   
+                    }
+                    j++;
+                }
+
+                // Swap the minimum element with the current element
+                int temp = array1[min];
+                array1[min] = array1[i];
+                array1[i] = temp;
+            }
+
+            // Time complexity Best=Big Omega(n^2), Average= Theta(n^2), Worst = small omega (n^2)
+
+            // Space cmplexity
         }
 
         private static void LeftRotate()

@@ -71,7 +71,7 @@ namespace AlgorithmDemo
         {
             //DesignPatternDemo.AbstractFactoryPatternDemo();
             //DesignPatternDemo.FactoryMethodDemo();
-            DesignPatternDemo.SingletonPatternDemo();
+            //DesignPatternDemo.SingletonPatternDemo();
             //CheckInheritanceFeature();
             //Car c1 = new Car();
             //c1.DescribeCar();
