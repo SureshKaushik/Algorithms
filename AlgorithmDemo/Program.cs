@@ -69,6 +69,9 @@ namespace AlgorithmDemo
     {
         static void Main(string[] args)
         {
+            //DesignPatternDemo.AbstractFactoryPatternDemo();
+            //DesignPatternDemo.FactoryMethodDemo();
+            DesignPatternDemo.SingletonPatternDemo();
             //CheckInheritanceFeature();
             //Car c1 = new Car();
             //c1.DescribeCar();
@@ -81,7 +84,7 @@ namespace AlgorithmDemo
             //EventCall();
 
             //DISample.CallConstructorInjection();
-            DISample.CallPropertyInjection();
+            // DISample.CallPropertyInjection();
 
            // Console.ReadLine();
 
