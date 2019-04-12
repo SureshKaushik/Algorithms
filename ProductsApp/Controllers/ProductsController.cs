@@ -10,6 +10,7 @@ namespace ProductsApp.Controllers
 {
     public class ProductsController : ApiController
     {
+        #region Get Started with ASP.NET Web API 2
         //
         // GET: /Products/
         Product[] products = new Product[]
@@ -33,5 +34,8 @@ namespace ProductsApp.Controllers
             }
             return Ok(product);
         }
-	}
+
+        #endregion
+
+    }
 }
