@@ -67,6 +67,8 @@
     <Compile Include="NCERT_Maths10.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchingAlgorithms.cs" />
+    <Compile Include="SortingAlgorithms.cs" />
     <Compile Include="StringDemo.cs" />
     <Compile Include="TimeEventAgrs.cs" />
     <Compile Include="VisibleClock.cs" />

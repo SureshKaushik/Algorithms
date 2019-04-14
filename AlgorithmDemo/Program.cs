@@ -97,9 +97,7 @@ namespace AlgorithmDemo
             add.Add();
 
             DisplayArrayElements();
-
-            InsertionSortDemo();
-
+            
             SelectBestCandidate();
 
 
@@ -476,9 +474,7 @@ namespace AlgorithmDemo
             Console.WriteLine("ref example: " + value);
             Console.ReadKey();
             //End: Another
-
-            BubbleSortDemo();
-
+            
             // Start: Event and delegates
             var clock = new Clock();
             var logger = new Logger();
@@ -538,6 +534,230 @@ namespace AlgorithmDemo
             //DelegateCall();
 
             Console.ReadLine();
+        }
+
+        private static void LeftRotate()
+        {
+            int k = 2;
+            int j;
+            int[] a = new int[5] { 1, 2, 3, 4, 5 };
+            int temp = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (k > 0)
+                {
+                    temp = a[i];
+                    k--;
+                }
+                j = i + 1;
+                if (j <= a.Length - 1)
+                    a[i] = a[j];
+
+                if (j == a.Length)
+                {
+                    a[i] = temp;
+                    k++;
+                }
+
+            }
+        }
+
+        private static void GetInput()
+        {
+            int i = 4;
+            double d = 4.0;
+            string s = "HackerRank ";
+
+            int i2;
+            double d2;
+            string s2;
+            // Declare second integer, double, and String variables.
+
+            i2 = Convert.ToInt16(Console.ReadLine());
+            d2 = Convert.ToDouble(Console.ReadLine());
+            s2 = Console.ReadLine();
+            // Read and save an integer, double, and String to your variables.
+            // Print the sum of both integer variables on a new line.
+
+            // Print the sum of the double variables on a new line.
+
+            // Concatenate and print the String variables on a new line
+            // The 's' variable above should be printed first.
+
+            double d3 = d + d2;
+
+            Console.WriteLine(i + i2);
+            Console.WriteLine(d3);
+            Console.WriteLine(s + s2);
+        }
+
+        private static void FIndInversionInArray()
+        {
+            int[] Arr = { 2, 3, 8, 6, 1 };
+
+            for (int i = 0; i < Arr.Length; i++)
+            {
+                int j = 0;
+                while (j < Arr.Length)
+                {
+                    if (i == j)
+                    {
+                        j++;
+                        continue;
+                    }
+
+                    if (i < j)
+                    {
+                        if (Arr[i] > Arr[j])
+                        {
+                            Console.WriteLine("i: {0}, j:{1}", Arr[i], Arr[j]);
+                        }
+                    }
+                    j++;
+                }
+            }
+        }
+
+        private static void MergeSort()
+        {
+            int[] A = { 2, 4, 5, 7, 1, 2, 3, 6 };
+
+            int p = 1;
+            int q = (p + A.Length) / 2;
+            int r = A.Length;
+
+            int n1 = q - p + 1;
+            int n2 = r - q;
+
+            int[] L = new int[n1];
+            int[] R = new int[n2];
+
+            for (int i = 0; i < n1; i++)
+            {
+                // Create left array;
+                L[i] = A[p + i - 1];
+            }
+
+            for (int j = 0; j < n2; j++)
+            {
+                // Create right array
+                R[j] = A[q + j];
+            }
+
+            for (int i = 0; i < L.Length; i++)
+            {
+                Console.Write(L[i] + " ");
+            }
+            Console.WriteLine("---------------------");
+            for (int i = 0; i < L.Length; i++)
+            {
+                Console.Write(R[i] + " ");
+            }
+
+            int i1 = 0;
+            int j1 = 0;
+            for (int k = p - 1; k < r; k++)
+            {
+                if (L[i1] < R[j1])
+                {
+                    A[k] = L[i1];
+                    i1++;
+                }
+                else
+                {
+                    A[k] = L[j1];
+                    j1 = j1 + 1;
+                }
+            }
+
+            for (int i = 0; i < r; i++)
+            {
+                Console.Write(A[i] + " ");
+            }
+        }
+
+        private static void MedianSort()
+        {
+            int[] Array1 = { 2, 4, 5, 1, 3 };
+
+            // find median index
+
+            int left = 0, right = Array1.Length - 1;
+            int mid = (left + right) / 2;
+
+            for (int i = 0; i < Array1.Length; i++)
+            {
+                if (Array1[mid] < Array1[i])
+                {
+
+                }
+            }
+        }
+
+
+
+        private static void BitArrayAddition()
+        {
+            int[] A = { 1, 2, 3, 4 };
+            int[] B = { 2, 3, 4, 6 };
+            int[] C = new int[A.Length];
+
+            for (int i = 0; i < C.Length; i++)
+            {
+                C[i] = A[i] + B[i];
+            }
+
+            for (int j = 0; j < C.Length; j++)
+            {
+                Console.WriteLine(C[j]);
+            }
+
+            Console.WriteLine("----------------------------------");
+
+            string[] C1 = new string[A.Length];
+            for (int i = 0; i < A.Length; i++)
+            {
+                // Convert to Binary element.
+                string bitString = ConvertToBinary(A[i] + B[i]);
+                C1[i] = bitString;
+            }
+
+            for (int j = 0; j < C1.Length; j++)
+            {
+                Console.WriteLine(C1[j]);
+            }
+        }
+
+        private static string ConvertToBinary(int p)
+        {
+            string bitString = "";
+            // string reverseString = "";
+            while (p > 0)
+            {
+                bitString += p % 2;
+                p = p / 2;
+            }
+
+            while (bitString.Length < 4)
+            {
+                bitString = "0" + bitString;
+            }
+
+            // Reverse a string
+            //int i = 4;
+            //while (i >= 0)
+            //{
+            //    reverseString = bitString[i].ToString();
+            //}
+
+            return bitString;
+        }
+
+
+
+        private static void PrintHello()
+        {
+            Console.WriteLine("Hello");
         }
 
         private static void CheckInheritanceFeature()
@@ -614,26 +834,7 @@ namespace AlgorithmDemo
             Console.WriteLine();
         }
 
-        private static void InsertionSortDemo()
-        {
-            Console.WriteLine("Insertion sort: ");
-            int[] num = { 12, 5, 4, 3, 1, 10, 8 };
-            for (int j = 1; j < num.Length; j++)
-            {
-                int i = j - 1;
-
-                while (i >= 0)
-                {
-                    if (num[i] > num[i + 1])
-                    {
-                        int temp = num[i];
-                        num[i] = num[i + 1];
-                        num[i + 1] = temp;
-                    }
-                    i--;
-                }
-            }
-        }
+        
 
         private static void SelectBestCandidate()
         {
@@ -702,7 +903,7 @@ namespace AlgorithmDemo
         {
             EventDemo ed = new EventDemo();
             ed.RaiseSampleEvent();
-            ArrayDemo.BinarySearch();
+            //ArrayDemo.BinarySearch();
             Console.ReadLine();
 
             Counter c = new Counter(new Random().Next(10));
@@ -822,54 +1023,7 @@ namespace AlgorithmDemo
             return result = i + j;
         }
 
-        public static void MergeSort(int[] A, int p, int r)
-        {
-            if (p < r)
-            {
-                int q = p + r / 2;
-                //MergeSort(A[], p, q);
-                //MergeSort(A[], q+1, r);
-                //Merge(A[], p, q, r);
-            }
-        }
-
-        public static void Merge(int[] A, int p, int q, int r)
-        {
-            int[] L = new int[A.Length / 2];
-            int[] R = new int[A.Length / 2];
-
-            //int p = 0;
-            for (int i = 0; i < A.Length / 2; i++)
-            {
-                L[i] = A[i];
-                p++;
-            }
-
-            for (int j = 0; j < A.Length / 2; j++)
-            {
-                R[j] = A[p + j];
-            }
-
-            for (int k = 0; k < A.Length; k++)
-            {
-                int i = 0, j = 0;
-                if (L[i] >= R[j])
-                {
-                    A[k] = R[j];
-                    R[j] = L[i];
-                    j++;
-                }
-                else
-                {
-                    A[k] = L[i];
-                    i++;
-                }
-            }
-            for (int x = 0; x < A.Length; x++)
-            {
-                Console.Write(A[x] + " ");
-            }
-        }
+        
 
         public static void FindRepeatedElement()
         {
@@ -1005,37 +1159,6 @@ namespace AlgorithmDemo
                 Console.WriteLine("Hello form derived..");
             }
         }
-
-        private static void BubbleSortDemo()
-        {
-            int[] array = { 4, 9, 6, 8, 5 };
-
-            for (int k = 0; k < array.Length - 1; k++)
-            {
-                for (int i = 0; i < array.Length - 1; i++)
-                {
-                    int j = i + 1;
-                    if (array[i] > array[j])
-                    {
-                        int temp = array[i];
-                        array[i] = array[j];
-                        array[j] = temp;
-
-                        j++;
-                    }
-                    else
-                    {
-                        j++;
-                    }
-                }
-            }
-
-            foreach (var item in array)
-            {
-                Console.Write(item);
-            }
-        }
-
 
         private static void ReverseArray()
         {

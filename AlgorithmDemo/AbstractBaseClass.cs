@@ -93,7 +93,7 @@ namespace AlgorithmDemo
             //ad.Method1();
         }
     }
-
+        
     class BaseClass
     {
         public virtual void Method1()

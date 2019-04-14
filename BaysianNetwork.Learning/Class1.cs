@@ -13,7 +13,6 @@ namespace BaysianNetwork.Learning
 //            FindProbabilityOfCancer();
 //            Console.ReadLine();
 //        }
-
 //        public static void FindProbabilityOfCancer()
 //        {
 //            //find Smoker = Y, Smoker = N
@@ -179,7 +178,7 @@ namespace BaysianNetwork.Learning
             sw.Start();
             test();
             sw.Stop();
-            // Console.WriteLine($"{title}: {sw.Elapsed.TotalMilliseconds:0.000}ms");
+            Console.WriteLine("{title}: {sw.Elapsed.TotalMilliseconds:0.000}ms");
         }
 
         public void SimpleTest()
@@ -326,7 +325,7 @@ namespace BaysianNetwork.Learning
             };
             for (var i = 10; i <= 20; i++) {
                 var root = makeTree(i);
-                Measure($"Cloning {root.TotalNodeCount} nodes", () => {
+                Measure("Cloning {root.TotalNodeCount} nodes", () => {
                     var copy = Cloner.Clone(root);
                     Assert(root != copy);
                 });
@@ -356,7 +355,7 @@ namespace BaysianNetwork.Learning
                     test.Invoke();
                 }
                 catch (Exception) {
-                    Console.WriteLine($"Failed on {test.GetMethodInfo().Name}.");
+                    Console.WriteLine("Failed on {test.GetMethodInfo().Name}.");
                 }
             }
             Console.WriteLine("Done.");
