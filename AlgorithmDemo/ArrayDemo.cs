@@ -9,34 +9,6 @@ namespace AlgorithmDemo
 {
     public class ArrayDemo
     {
-        private static void StringMatchingPattern(string text, string pattern)
-        {
-            int i = 0;
-            int counter = 0;
-            while (i < (text.Length - (pattern.Length - 1)))
-            {
-                int j = 0;
-                while (j < pattern.Length)
-                {
-                    if (text[i] == pattern[j])
-                    {
-                        i++;
-                        j++;
-                        counter++;
-                    }
-                    else
-                    {
-                        i++;
-                    }
-                }
-            }
-
-            if (counter == pattern.Length)
-            {
-                Console.WriteLine("Pattern {0} found in text {1}", pattern, text);
-            }
-        }
-
         private static void SumArrayElements(int[] arr)
         {
             int sum = 0;

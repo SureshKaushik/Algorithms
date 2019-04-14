@@ -532,7 +532,7 @@ namespace AlgorithmDemo
             //}
 
             //DelegateCall();
-
+            StringDemo.StringMatchingBruteForce();
             Console.ReadLine();
         }
 
