@@ -25,14 +25,17 @@ namespace ProductsApp.Controllers
             return products;
         }
 
+
         public IHttpActionResult GetProduct(int id)
         {
             var product = products.FirstOrDefault((p) => p.Id == id);
             if (product == null)
             {
-                return NotFound();
+                // If the requst does not match an existing product ID, 
+                // the controller calls ApiController.NotFound to create a 404 (Not Found) response.
+                return NotFound();  //Returns a NotFoundResult
             }
-            return Ok(product);
+            return Ok(product); // Returns an OkNegotiatedContentResult
         }
 
         #endregion
