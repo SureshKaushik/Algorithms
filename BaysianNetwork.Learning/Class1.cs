@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace BaysianNetwork.Learning
 {
-//    class Program
-//    {
-//        static void Main(string[] args)
-//        {
-//            FindProbabilityOfCancer();
-//            Console.ReadLine();
-//        }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //FindProbabilityOfCancer();
+            Console.ReadLine();
+        }
+    }
 //        public static void FindProbabilityOfCancer()
 //        {
 //            //find Smoker = Y, Smoker = N

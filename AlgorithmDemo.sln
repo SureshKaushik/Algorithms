@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmDemo", "AlgorithmD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplementDataAccess", "ImplementDataAccess\ImplementDataAccess.csproj", "{C3AC3CB6-96A6-45EC-87D3-D02368204629}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormDemo", "..\WinFormDemo\WinFormDemo\WinFormDemo.csproj", "{BE0D3023-54B5-4CA4-9AF5-88CCEF739622}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLRS_AlgoDemo", "CLRS_AlgoDemo\CLRS_AlgoDemo.csproj", "{992EDBB7-7DAE-4B74-96E1-4AF4E0479B4B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaysianNetwork.Learning", "BaysianNetwork.Learning\BaysianNetwork.Learning.csproj", "{39DA78DD-A007-474C-A130-7E9E68BF81AD}"
@@ -35,10 +33,6 @@ Global
 		{C3AC3CB6-96A6-45EC-87D3-D02368204629}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3AC3CB6-96A6-45EC-87D3-D02368204629}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3AC3CB6-96A6-45EC-87D3-D02368204629}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BE0D3023-54B5-4CA4-9AF5-88CCEF739622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE0D3023-54B5-4CA4-9AF5-88CCEF739622}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE0D3023-54B5-4CA4-9AF5-88CCEF739622}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE0D3023-54B5-4CA4-9AF5-88CCEF739622}.Release|Any CPU.Build.0 = Release|Any CPU
 		{992EDBB7-7DAE-4B74-96E1-4AF4E0479B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{992EDBB7-7DAE-4B74-96E1-4AF4E0479B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{992EDBB7-7DAE-4B74-96E1-4AF4E0479B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
