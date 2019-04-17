@@ -16,6 +16,8 @@ namespace AlgorithmDemo
         public virtual void Method1()
         {
             Console.WriteLine("Base - Method1");
+
+
         }
 
         public virtual void Method2()
@@ -69,6 +71,9 @@ namespace AlgorithmDemo
     {
         static void Main(string[] args)
         {
+
+
+
             //DesignPatternDemo.AbstractFactoryPatternDemo();
             //DesignPatternDemo.FactoryMethodDemo();
             //DesignPatternDemo.SingletonPatternDemo();
