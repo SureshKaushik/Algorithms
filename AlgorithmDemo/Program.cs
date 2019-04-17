@@ -532,7 +532,15 @@ namespace AlgorithmDemo
             //}
 
             //DelegateCall();
+
             StringDemo.StringMatchingBruteForce();
+
+
+            // Shallow and Deep copy demo
+
+            ShallowAndDeepCopyExample.ShallowAndDeep();
+
+
             Console.ReadLine();
         }
 
