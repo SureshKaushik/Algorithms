@@ -23,7 +23,7 @@ namespace LearnMSDN
             this.Balance = initialBalance;
         }
 
-        public int Number { get; }
+        public int Number { get; set; }
         public string Owner { get; set; }
         public decimal Balance { get; set; }
 
