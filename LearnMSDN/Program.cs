@@ -15,6 +15,8 @@ namespace LearnMSDN
     class Program
     {
         public delegate void Del(int x);
+        
+
         static void Main(string[] args)
         {
             //DelegateDemo demo = new DelegateDemo();
@@ -104,7 +106,32 @@ namespace LearnMSDN
             //LongestChain();
             //LeftRotate();
 
+            //AccountCreate();
+           
+            
             Console.ReadLine();
+        }
+
+        private static void AccountCreate()
+        {
+            try
+            {
+                BankAccount account = new BankAccount("Suresh", 1000M);
+                account.MakeDeposit(400, new DateTime(2019, 04, 19), "This is my first deposit");
+                Console.WriteLine("Total Balance: {0}", account.Balance);
+
+                account.MakeWithdrawal(200, new DateTime(2019, 05, 19), "This is my first withdrawal.");
+                Console.WriteLine("Total Balance: {0}", account.Balance);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                Console.WriteLine("Exception caught creating account with negative amount");
+                Console.WriteLine(ex.ToString());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception occured: {0}", ex.Message);
+            }
         }        
 
         private static void LeftRotate()
