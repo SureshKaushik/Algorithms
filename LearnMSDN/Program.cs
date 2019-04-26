@@ -108,6 +108,7 @@ namespace LearnMSDN
 
             //AccountCreate();
             OperatorOverloadingSample.OperatorOverload();
+            TestAuthorAttribute.Test();
             
             Console.ReadLine();
         }
