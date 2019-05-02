@@ -107,8 +107,11 @@ namespace LearnMSDN
             //LeftRotate();
 
             //AccountCreate();
-            OperatorOverloadingSample.OperatorOverload();
-            TestAuthorAttribute.Test();
+            //OperatorOverloadingSample.OperatorOverload();
+            //TestAuthorAttribute.Test();
+
+            //StaticClassDemo obj = new StaticClassDemo();
+            StaticClassDemo.StaticMethod();
             
             Console.ReadLine();
         }
