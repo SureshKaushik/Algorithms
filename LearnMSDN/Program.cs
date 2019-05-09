@@ -111,7 +111,8 @@ namespace LearnMSDN
             //TestAuthorAttribute.Test();
 
             //StaticClassDemo obj = new StaticClassDemo();
-            StaticClassDemo.StaticMethod();
+            StaticClassDemo.StaticClassDemoMethod();
+            //PrivateConstructorDemo.CallPrivateConstructor();
             
             Console.ReadLine();
         }
