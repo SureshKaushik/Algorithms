@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace LearnMSDN
 {
+    #region Private Constructor
     public class PrivateConstructor
     {
         /// <summary>
@@ -38,6 +39,10 @@ namespace LearnMSDN
             Console.WriteLine("New count: {0}", PrivateConstructor.currentCount);
         }
     }
+
+    #endregion
+
+    #region static constructor
 
     public class Bus
     {
@@ -76,9 +81,9 @@ namespace LearnMSDN
         }
     }
 
-    public static class StaticClassDemo
+    public static class StaticConstructorDemo
     {
-        public static void StaticClassDemoMethod()
+        public static void StaticConstructorDemoMethod()
         {
             Bus bus1 = new Bus(71);
             Bus bus2 = new Bus(72);
@@ -90,4 +95,109 @@ namespace LearnMSDN
             bus2.Drive();            
         }
     }
+    #endregion 
+
+    #region Copy Constructor
+
+    /// <summary>
+    /// C# doesn't provie a copy constructor for objects, but you can write one yourself.
+    /// Person class defines a copy constructor that takes, as its argument, an instance of Person.
+    /// The values of the properties of the argument are assigned to the properties of the new instance of Person.
+    /// The code contains an alternative copy constructor that sends the Name and Age properties of the instance that you want to copy to the instance constructor of the class.
+    /// </summary>
+    class Person
+    {
+        public int Age { get; set; }
+
+        public string Name { get; set; }
+        public Person(Person previousPerson)
+        {
+            Name = previousPerson.Name;
+            Age = previousPerson.Age;
+        }
+
+        public Person(string name, int age)
+        {
+            Name = name;
+            Age = age;
+        }
+
+        public string Details()
+        {
+            return Name + " is " + Age.ToString();
+        }
+    }
+
+    class TestPerson
+    {
+        public static void CopyConstructorDemo()
+        {
+            Person person1 = new Person("Suresh", 30);
+
+            Person person2 = new Person(person1);
+            person1.Age = 31;
+            person2.Age = 35;
+
+            person2.Name = "Manish";
+
+            Console.WriteLine(person1.Details());
+            Console.WriteLine(person2.Details());
+        }
+    }
+    #endregion
+
+    #region static class
+
+    /// <summary>
+    /// A static class is basically the same as a non-static class, but there is one difference: a static class cannot be instantiated. 
+    /// In other words, you cannot us the new keyword to crate a variable of the class type.
+    /// Because there is no intance variable, you access the members of a static class by using the class name itselt.
+    /// A static class can be used as a convenient container for sets of methods that just operate on input parameters and do not have to get or set any internal instance fields. Eg. Math class
+    /// </summary>
+    public static class TemperatureConverter
+    {
+        public static double CensiusToFahrenheit(string temperatureCensius)
+        {
+            double celsius = Double.Parse(temperatureCensius);
+            double fahrenheit = (celsius * 9 / 5) + 32;
+            return fahrenheit;
+        }
+
+        public static double FahrenheitToCelsius(string temperatureFahrenheit)
+        {
+            double fahrenheit = Double.Parse(temperatureFahrenheit);
+            double cencius = (fahrenheit - 32) * 5 / 9;
+            return cencius;
+        }
+    }
+
+    class TestTemperatureConverter
+    {
+        public static void StaticMethod()
+        {
+            Console.WriteLine("Please select the convertor direction");
+            Console.WriteLine("1. From Celsius to Fahrenheit.");
+            Console.WriteLine("2. From Fahrenheit to Celcius.");
+
+            string selection = Console.ReadLine();
+            double F, C = 0;
+
+            switch (selection)
+            {
+                case "1":
+                    Console.WriteLine("Please enter the Celcius temperature:");
+                    F = TemperatureConverter.CensiusToFahrenheit(Console.ReadLine());
+                    Console.WriteLine("Temperature in Fahrenheit: {0:F2}", F);
+                    break;
+                case "2":
+                    Console.WriteLine("Please enter the Fahrenheit temperature:");
+                    C = TemperatureConverter.FahrenheitToCelsius(Console.ReadLine());
+                    break;
+                default:
+                    Console.WriteLine("Please select a convertor.");
+                    break;
+            }
+        }
+    }
+    #endregion 
 }
