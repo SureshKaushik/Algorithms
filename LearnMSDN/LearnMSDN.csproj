@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessModifiersDemo.cs" />
     <Compile Include="AttributeDemo.cs" />
     <Compile Include="BankAccount.cs" />
     <Compile Include="OperatorOverloadingSample.cs" />

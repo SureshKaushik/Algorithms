@@ -153,6 +153,10 @@ namespace LearnMSDN
     /// In other words, you cannot us the new keyword to crate a variable of the class type.
     /// Because there is no intance variable, you access the members of a static class by using the class name itselt.
     /// A static class can be used as a convenient container for sets of methods that just operate on input parameters and do not have to get or set any internal instance fields. Eg. Math class
+    /// Contains only static members.
+    /// Cannot be instantiated.
+    /// Is sealed
+    /// Cannot contain Instance Constructors.
     /// </summary>
     public static class TemperatureConverter
     {
