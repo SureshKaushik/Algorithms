@@ -115,7 +115,8 @@ namespace LearnMSDN
             //PrivateConstructorDemo.CallPrivateConstructor();
 
             //TestPerson.CopyConstructorDemo();
-            TestTemperatureConverter.StaticMethod();
+            //TestTemperatureConverter.StaticMethod();
+            IEnumerableDemo.IEnumerableDemoMethod();
             
             Console.ReadLine();
         }
