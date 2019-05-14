@@ -61,6 +61,7 @@
     <Compile Include="AttributeDemo.cs" />
     <Compile Include="BankAccount.cs" />
     <Compile Include="IEnumerableDemo.cs" />
+    <Compile Include="IQueryableDemo.cs" />
     <Compile Include="OperatorOverloadingSample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

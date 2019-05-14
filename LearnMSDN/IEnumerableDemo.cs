@@ -53,6 +53,7 @@ namespace LearnMSDN
 
     /// <summary>
     /// When you implement IEnumerable, you must also implement IEnumerator.
+    /// IEnumerator: provides the ability to iterate through the collection by exposing a Current property and MoveNext and Reset methods.
     /// </summary>
     public class PeopleEnum : IEnumerator
     {
