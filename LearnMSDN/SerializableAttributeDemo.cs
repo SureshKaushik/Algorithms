@@ -11,6 +11,7 @@ namespace LearnMSDN
 {
     /// <summary>
     /// A test object that needs to be serialized.
+    /// Serializable: indicates that a class can be serialized . This class cannot be inherited.
     /// </summary>
     [Serializable()]
     public class TestSimpleObject
@@ -46,20 +47,24 @@ namespace LearnMSDN
     {
         public static void SerializableAttributeDemoMethod()
         {
+            // create a new TestSimpleObject object.
             TestSimpleObject simpleObj = new TestSimpleObject();
             Console.WriteLine("Before serialization object contains:");
             simpleObj.Print();
 
-            Stream stream = File.Open("data.xml", FileMode.Create);
-            SoapFormatter formatter = new SoapFormatter();
+            // open a file and serialize the object into it in binary format.
+            Stream stream = File.Open("data.txt", FileMode.Create);
+            BinaryFormatter formatter = new BinaryFormatter();
 
             formatter.Serialize(stream, simpleObj);
             stream.Close();
 
+            // Empties object.
             simpleObj = null;
 
-            stream = File.Open("data.xml", FileMode.Open);
-            formatter = new SoapFormatter();
+            // Open file "data.xml" and deserialize the object from it.
+            stream = File.Open("data.txt", FileMode.Open);
+            formatter = new BinaryFormatter();
 
             simpleObj = (TestSimpleObject)formatter.Deserialize(stream);
             stream.Close();
