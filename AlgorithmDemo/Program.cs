@@ -538,15 +538,38 @@ namespace AlgorithmDemo
 
             //DelegateCall();
 
-            StringDemo.StringMatchingBruteForce();
+            //StringDemo.StringMatchingBruteForce();
 
 
             // Shallow and Deep copy demo
 
-            ShallowAndDeepCopyExample.ShallowAndDeep();
+            //ShallowAndDeepCopyExample.ShallowAndDeep();
+
+            ReverseString();
 
 
             Console.ReadLine();
+        }
+
+        private static void ReverseString()
+        {
+            int[] arr = { 1, 2, 3, 4, 5, 10, 11};
+
+            int l = arr.Length-1;
+            for (int i = 0; i < arr.Length/2; i++)
+            {
+                if (i != l)
+                {
+                    int temp = arr[i];
+                    arr[i] = arr[l];
+                    arr[l] = temp;
+                    l--; 
+                }                
+            }
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
         }
 
         private static void LeftRotate()
