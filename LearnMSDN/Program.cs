@@ -117,7 +117,8 @@ namespace LearnMSDN
             //TestPerson.CopyConstructorDemo();
             //TestTemperatureConverter.StaticMethod();
             //IEnumerableDemo.IEnumerableDemoMethod();
-            SerializableAttributeDemo.SerializableAttributeDemoMethod();
+            //SerializableAttributeDemo.SerializableAttributeDemoMethod();
+            DestructorDemo.DestructorDemoMethod();
             
             Console.ReadLine();
         }
