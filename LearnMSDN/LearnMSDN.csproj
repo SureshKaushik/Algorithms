@@ -66,6 +66,7 @@
     <Compile Include="IQueryableDemo.cs" />
     <Compile Include="OperatorOverloadingSample.cs" />
     <Compile Include="PartialClassDemo.cs" />
+    <Compile Include="PolymorphismDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SerializableAttributeDemo.cs" />

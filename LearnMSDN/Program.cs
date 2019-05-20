@@ -119,7 +119,10 @@ namespace LearnMSDN
             //IEnumerableDemo.IEnumerableDemoMethod();
             //SerializableAttributeDemo.SerializableAttributeDemoMethod();  // 20/05/2019
             //DestructorDemo.DestructorDemoMethod();
-            PartialClassDemo.PartialClassDemoMethod();
+            //PartialClassDemo.PartialClassDemoMethod();
+            //PolymorphismDemo.PolymorphismDemoMethod();
+            //PolymorphismDemo.HideBaseClassMemMethod();
+            PolymorphismDemo.VirtualMemberMethod();
             
             Console.ReadLine();
         }

@@ -103,13 +103,13 @@ namespace LearnMSDN
         /// 7. the following kewords on a partial-type definition are option -> public, private, protected, internal, 
         /// abstract, sealed, base class, new modifier (nested parts), and generic constraints
         /// </summary>
-        partial void onNameChanged();
+        //partial void onNameChanged();
 
         // Implementation is file2.cs
-        partial void onNameChanged()
-        {
-            // method body
-        }
+        //partial void onNameChanged()
+        //{
+        //    // method body
+        //}
         #endregion
         public static void PartialClassDemoMethod()
         {
