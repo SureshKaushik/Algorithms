@@ -63,6 +63,7 @@ function TryIt() {
     //math01();    
     //ConfirmationAndAlertPopupDialog()
     //PromptPopupDialog();
+    ConditionalOperators()
 }
 
 // #region Exercise 1.2 Pop-up Dialogs
@@ -88,4 +89,88 @@ function PromptPopupDialog()
 }
 // #endregion Exercise 1.2 Pop-up Dialogs
 
-// #region Exercise 1.3
+// #region Exercise 1.3 Conditional Operations
+function ConditionalOperators()
+{
+    //Conditionals01(10, 10);
+    //Conditionals01(10, 11);
+
+    //Conditional02(10, 10);
+    //Conditional02(10, 11);
+
+    //Conditional03(1);
+    //Conditional03(2);
+    //Conditional03(3);
+
+    //Conditional04(1, 1);
+    //Conditional04(1, 2);
+
+    //alert(Conditional05(1));
+    //alert(Conditional05(2));
+    alert(Conditional05(5));
+}
+function Conditionals01(value1, value2)
+{
+    // == and != operator
+    if(value1==value2)
+    {
+        alert(value1 + " = " + value2);
+    }
+    else
+    {
+        alert(value1 + " != " + value2)
+    }
+}
+function Conditional02(value1, value2)
+{
+    // < and > opertor
+    if(value1 > value2)
+    {
+        alert(value1 + " > " + value2);
+    }
+    else
+    {
+        alert(value1 +" < "+ value2)
+    }
+}
+function Conditional03(value1)
+{
+    // or operator (false-false => false)
+    if(value1==1 || value1==2)
+    {
+        alert(value1 + " is 1 or 2 ");
+    }
+    else
+    { alert(value1 + " is not 1 or 2");}
+}
+function Conditional04(value1, value2)
+{
+    // and operator (true=true => true)
+    if(value1 ==1 && value2==1)
+    {
+        alert(value1 + " is 1 and " + value2 + " is 1");
+    }
+    else
+    {
+        alert(value1 + " is not 1 and " + value2 + " is not 1") 
+    }
+}
+function Conditional05(value)
+{
+    var result;
+    switch(value)
+    {
+        case 1:
+            result = "blue";
+            break;
+        case 2:
+            result = "red";
+            break;
+        default:
+            result = "orange";
+            break;
+    }
+    return result
+}
+
+// #endregion Exercise 1.3 Conditional Operations
