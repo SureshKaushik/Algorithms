@@ -117,12 +117,18 @@ namespace LearnMSDN
             //TestPerson.CopyConstructorDemo();
             //TestTemperatureConverter.StaticMethod();
             //IEnumerableDemo.IEnumerableDemoMethod();
-            //SerializableAttributeDemo.SerializableAttributeDemoMethod();  // 20/05/2019
-            //DestructorDemo.DestructorDemoMethod();
+            ////-----20/05/2019
+            //SerializableAttributeDemo.SerializableAttributeDemoMethod();  
+            //DestructorDemo.DestructorDemoMethod();    
             //PartialClassDemo.PartialClassDemoMethod();
             //PolymorphismDemo.PolymorphismDemoMethod();
             //PolymorphismDemo.HideBaseClassMemMethod();
-            PolymorphismDemo.VirtualMemberMethod();
+            //PolymorphismDemo.VirtualMemberMethod();
+            ////-----20/05/2019
+
+            ////----21/05/2019
+            //PolymorphismDemo.VirtualMethodVersioning();
+            PolymorphismDemo.VirtualMethodVersioning2();
             
             Console.ReadLine();
         }

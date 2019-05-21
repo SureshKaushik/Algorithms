@@ -130,6 +130,65 @@ namespace LearnMSDN
     }
     #endregion
 
+    #region Versioning with override and virtual keywords
+    /// <summary>
+    /// /Example - 1
+    /// </summary>
+    class GraphicsClass
+    {
+        public virtual void DrawLine()
+        {
+            Console.WriteLine("Base class DrawLine method.");
+        }
+        public virtual void DrawPoint()
+        {
+            Console.WriteLine("Base class DrawPoint method.");
+        }
+    }
+
+    class YourDerivedGraphicsClass:GraphicsClass
+    {
+        public void DrawRectangle()
+        {
+            Console.WriteLine("Derived class DrawRactangle method.");
+        }
+
+        public override void DrawLine()
+        {
+            Console.WriteLine("Derived class drawline implementation");
+            //base.DrawLine();
+        }
+
+        public override void DrawPoint()
+        {
+            Console.WriteLine("Derived class drawPoint implementation");
+            //base.DrawPoint();
+        }
+    }
+
+    public class Base1
+    {
+        public virtual void DoWork(int param)
+        {
+            Console.WriteLine("Base, value: {0}", param);
+        }
+    }
+
+    public class Derived1: Base1
+    {
+        public override void DoWork(int param)
+        {
+            Console.WriteLine("Derived, value: {0}", param);
+            //base.DoWork(param);
+        }
+        public void DoWork(double param)
+        {
+            Console.WriteLine("Derived, value: {0}", param);
+        }
+    }
+
+    #endregion
+
     class PolymorphismDemo
     {
         public static void PolymorphismDemoMethod()
@@ -168,6 +227,44 @@ namespace LearnMSDN
 
             BaseClassVirtual A =(BaseClassVirtual) B;
             A.DoWork();
+        }
+
+        public static void VirtualMethodVersioning()
+        {
+            GraphicsClass baseClass = new GraphicsClass();
+            baseClass.DrawLine();
+            baseClass.DrawPoint();
+
+            YourDerivedGraphicsClass derivedClass = new YourDerivedGraphicsClass();
+            derivedClass.DrawLine();
+            derivedClass.DrawPoint();
+            derivedClass.DrawRectangle();
+            ((GraphicsClass)derivedClass).DrawLine();
+
+            //YourDerivedGraphicsClass derived2 = new GraphicsClass();            // Error: cannot implicit convert GraphicsClass to YourDerivedGraphicsClass
+            //derived2.DrawLine();
+            //derived2.DrawPoint();
+            //derived2.DrawRectangle();
+
+            GraphicsClass baseClass2 = new YourDerivedGraphicsClass();
+            baseClass2.DrawLine();
+            baseClass2.DrawPoint();                       
+
+        }
+        public static void VirtualMethodVersioning2()
+        {
+            int val= 5;
+
+            Base1 b = new Base1();
+            b.DoWork(val);
+
+            //Derived1 d = b; //Error: cannot convert Base1 to Derived1 (Casting missing)
+            //b.DoWork(5);
+
+            Derived1 d1 = new Derived1();
+            d1.DoWork(val);  // double/int param
+
+            ((Base1)d1).DoWork(val);
         }
     }
 }
