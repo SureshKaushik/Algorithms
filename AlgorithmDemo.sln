@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplementDataAccess", "Impl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLRS_AlgoDemo", "CLRS_AlgoDemo\CLRS_AlgoDemo.csproj", "{992EDBB7-7DAE-4B74-96E1-4AF4E0479B4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaysianNetwork.Learning", "BaysianNetwork.Learning\BaysianNetwork.Learning.csproj", "{39DA78DD-A007-474C-A130-7E9E68BF81AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScriptLibrary", "BaysianNetwork.Learning\JavaScriptLibrary.csproj", "{39DA78DD-A007-474C-A130-7E9E68BF81AD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnMSDN", "LearnMSDN\LearnMSDN.csproj", "{037B7D1A-34CC-41B3-A6F3-305FE34CCD78}"
 EndProject

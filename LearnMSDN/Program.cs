@@ -128,7 +128,8 @@ namespace LearnMSDN
 
             ////----21/05/2019
             //PolymorphismDemo.VirtualMethodVersioning();
-            PolymorphismDemo.VirtualMethodVersioning2();
+            //PolymorphismDemo.VirtualMethodVersioning2();
+            PolymorphismDemo.UseOverrideAndNew();
             
             Console.ReadLine();
         }

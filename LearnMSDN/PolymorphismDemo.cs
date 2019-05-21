@@ -189,6 +189,33 @@ namespace LearnMSDN
 
     #endregion
 
+    #region When to use override and new keywords
+    /// <summary>
+    /// In c#, amethod in a derived class can have the same name as a method in the vase class.
+    /// You can specify how the methods interact by using the new and override keywords.
+    /// The override modifier extends the vase class methods, and the new modifier hides it.    
+    /// </summary>
+    class Base2
+    {
+        public void Method1()
+        {
+            Console.WriteLine("Base - Method1");
+        }
+        public void Method2()
+        {
+            Console.WriteLine("Base - Method2");
+        }
+    }
+    class Derived2:Base2
+    {
+        public void Method2()
+        {
+            Console.WriteLine("Derived- Method2");
+        }
+    }
+
+    #endregion
+
     class PolymorphismDemo
     {
         public static void PolymorphismDemoMethod()
@@ -265,6 +292,19 @@ namespace LearnMSDN
             d1.DoWork(val);  // double/int param
 
             ((Base1)d1).DoWork(val);
+        }
+        public static void UseOverrideAndNew()
+        {
+            Base2 bc = new Base2();
+            Derived2 dc = new Derived2();
+            Base2 bcdc = new Derived2();
+
+            bc.Method1();
+            bc.Method2();
+            dc.Method1();
+            dc.Method2();
+            bcdc.Method1();
+            bcdc.Method2();
         }
     }
 }
