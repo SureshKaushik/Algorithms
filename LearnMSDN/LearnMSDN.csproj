@@ -61,6 +61,7 @@
     <Compile Include="AccessModifiersDemo.cs" />
     <Compile Include="AttributeDemo.cs" />
     <Compile Include="BankAccount.cs" />
+    <Compile Include="CollectionsDemo.cs" />
     <Compile Include="DestructorDemo.cs" />
     <Compile Include="IEnumerableDemo.cs" />
     <Compile Include="IQueryableDemo.cs" />

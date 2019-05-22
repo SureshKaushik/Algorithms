@@ -57,7 +57,6 @@ namespace AlgorithmDemo
                 head = newNode;
             }
             // Inserting at position
-
             while (head.Next != null)
             {
                 Console.WriteLine(head.Data);
