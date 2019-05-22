@@ -40,9 +40,33 @@ namespace AlgorithmDemo
             int mid = count / 2;
 
         }
+
+        public static void InsertInLinkedList(Node head, int data, int position)
+        {
+            int k = 1;
+            Node p, q, newNode;
+
+            newNode = new Node();
+            newNode.Data = data;
+            p = head;
+
+            // Inserting at the beginning
+            if (position==1)
+            {
+                newNode.Next = p;
+                head = newNode;
+            }
+            // Inserting at position
+
+            while (head.Next != null)
+            {
+                Console.WriteLine(head.Data);
+                head = head.Next;
+            }
+        }
     }
 
-    class Node
+    public class Node
     {
         public int Data { get; set; }
         public Node Next { get; set; }

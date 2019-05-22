@@ -91,7 +91,7 @@ namespace AlgorithmDemo
             //DISample.CallConstructorInjection();
             // DISample.CallPropertyInjection();
 
-           // Console.ReadLine();
+            // Console.ReadLine();
 
             //ChildCls c2 = new BaseCls();
             //c2.Print();
@@ -545,7 +545,11 @@ namespace AlgorithmDemo
 
             //ShallowAndDeepCopyExample.ShallowAndDeep();
 
-            ReverseString();
+            //ReverseString();
+
+            Node head = new Node();
+
+            LinkedListOps.InsertInLinkedList(head, 4, 1);
 
 
             Console.ReadLine();
