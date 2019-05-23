@@ -43,24 +43,50 @@ namespace AlgorithmDemo
 
         public static void InsertInLinkedList(Node head, int data, int position)
         {
-            int k = 1;
-            Node p, q, newNode;
+            int count= 1;
+            Node currentHead=null, tempNode=null, newNode;
 
             newNode = new Node();
             newNode.Data = data;
-            p = head;
+            currentHead = head;
+
+            // Show the list 
+            Console.WriteLine("Before LinkedList operations: ");
+            while (head != null)
+            {
+                Console.Write(head.Data  + " ");
+                head = head.Next;
+            }
+            Console.Write("\n");
 
             // Inserting at the beginning
-            if (position==1)
+            if (position == 1)
             {
-                newNode.Next = p;
+                // 1. Update the next pointer of new node, to point to the current head                
+                newNode.Next = currentHead;
+
+                // 2. Update head pointer to point to the new noede. 
                 head = newNode;
             }
-            // Inserting at position
-            while (head.Next != null)
+            else
             {
-                Console.WriteLine(head.Data);
-                head = head.Next;
+                // Traverse the list until the position where we want to insert
+                while (currentHead != null && count < position)
+                {
+                    count++;
+                    tempNode = currentHead;
+                    currentHead = currentHead.Next;
+                }
+                tempNode.Next = newNode;
+                newNode.Next = currentHead;
+            }
+
+            // Show the list after the operation
+            Console.WriteLine("After LinkedList operations: ");
+            while (tempNode != null)
+            {
+                Console.Write(tempNode.Data + " ");
+                tempNode = tempNode.Next;
             }
         }
     }

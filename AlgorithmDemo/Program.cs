@@ -547,12 +547,31 @@ namespace AlgorithmDemo
 
             //ReverseString();
 
-            Node head = new Node();
+            Node head = FillDataToLinkedList();
 
-            LinkedListOps.InsertInLinkedList(head, 4, 1);
+            LinkedListOps.InsertInLinkedList(head, 4, 2);
 
 
             Console.ReadLine();
+        }
+
+        private static Node FillDataToLinkedList()
+        {
+            Node first, second, third;
+            first = new Node();
+            second = new Node();
+            third = new Node();
+
+            first.Data = 15;
+            first.Next = second;
+
+            second.Data = 7;
+            second.Next = third;
+
+            third.Data = 40;
+            third.Next = null;
+
+            return first;
         }
 
         private static void ReverseString()
