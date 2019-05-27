@@ -122,8 +122,64 @@ namespace LearnMSDN
         // Whenever possible, you should use the generic collections or collections.concurrent instead of the legacy types in the System.Collections
         // E.g. ArrayList, HashTable, Queue, Stack
 
+        private static void IterateThroughDictionary()
+        {
+            //The Dictionary<T, T> generic collection  enables you to access to elements in a collection by using 
+            // the key of each element. Each addition to the dictiona ry consists of a value and its associated key.
+            // Retrieving a value by using its key is fast because the Dictionary class is implemented as hash table
+            Dictionary<string, Element> elements = BuildDictionary();
 
+            // To instead use a collection initializer to build the Dictionary collection, you can replace the BuildDictionary and AddToDictionary 
+            // methods with the following method.
+
+            Dictionary<string, Element> elements2 = BuildDictionary2();
+
+            foreach (KeyValuePair<string, Element> kvp in elements)
+            {
+                Element theElement = kvp.Value;
+
+                Console.WriteLine("key: {0}", kvp.Key);
+                Console.WriteLine("values: " + theElement.Symbol + " " + theElement.Name + " " + theElement.AtomicNumber);
+            }
+        }
+
+        private static Dictionary<string, Element> BuildDictionary2()
+        {
+            return new Dictionary<string, Element>
+            {
+                {"K", new Element{Symbol = "K", Name="Potassium", AtomicNumber=19}},
+                {"Ca", new Element{Symbol="Ca", Name="Calcium", AtomicNumber=20}},
+                {"Sc", new Element{Symbol="Sc", Name="Scandium", AtomicNumber=21}},
+                {"Ti", new Element{Symbol="Ti", Name="Titanium"}}
+        }
+
+        private static Dictionary<string, Element> BuildDictionary()
+        {
+            var elements = new Dictionary<string, Element>();
+            AddToDictionary(elements, "K", "Potassium", 19);
+            AddToDictionary(elements, "Ca", "Calcium", 20);
+            AddToDictionary(elements, "Sc", "Scandium", 21);
+            AddToDictionary(elements, "Ti", "Titanium", 22);
+
+            return elements;
+        }
+
+        private static void AddToDictionary(Dictionary<string, Element> elements, string sysmbol, string name, int atomicNumber)
+        {
+            Element theElement = new Element();
+            theElement.Symbol = sysmbol;
+            theElement.Name = name;
+            theElement.AtomicNumber = atomicNumber;
+
+            elements.Add(key:theElement.Symbol, value: theElement);
+        }
         #endregion 
+    }
+    class Element
+    {
+        public string Symbol { get; set; }
+        public string Name { get; set; }
+        public int AtomicNumber { get; set; }
     }
 
     class Galaxy
