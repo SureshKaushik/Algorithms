@@ -151,6 +151,7 @@ namespace LearnMSDN
                 {"Ca", new Element{Symbol="Ca", Name="Calcium", AtomicNumber=20}},
                 {"Sc", new Element{Symbol="Sc", Name="Scandium", AtomicNumber=21}},
                 {"Ti", new Element{Symbol="Ti", Name="Titanium"}}
+            };
         }
 
         private static Dictionary<string, Element> BuildDictionary()
