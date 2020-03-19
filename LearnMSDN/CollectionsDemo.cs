@@ -109,6 +109,7 @@ namespace LearnMSDN
             }
        }
 
+        
         #region Kinds of Collections
         // 1. System.Collections.Generics classes=> Dictionary<T>, List<T>, Queue<T>, SortedList<T>, Stack<T>
         // 2. System.Collections.Consurrent classes => .Net 4 or newer., the collections provide a efficient 
@@ -134,6 +135,10 @@ namespace LearnMSDN
 
             Dictionary<string, Element> elements2 = BuildDictionary2();
 
+            // ContainsKey method and the Item[TKey] property of Dictionary to quickly find an item by key. 
+            string smbol = "K";
+            FindInDictionary(symbol);
+
             foreach (KeyValuePair<string, Element> kvp in elements)
             {
                 Element theElement = kvp.Value;
@@ -141,6 +146,11 @@ namespace LearnMSDN
                 Console.WriteLine("key: {0}", kvp.Key);
                 Console.WriteLine("values: " + theElement.Symbol + " " + theElement.Name + " " + theElement.AtomicNumber);
             }
+        }
+
+        private static void FindInDictionary(object symbol)
+        {
+            Dictionary<>
         }
 
         private static Dictionary<string, Element> BuildDictionary2()
@@ -174,8 +184,11 @@ namespace LearnMSDN
 
             elements.Add(key:theElement.Symbol, value: theElement);
         }
+        
+        
         #endregion 
     }
+
     class Element
     {
         public string Symbol { get; set; }
